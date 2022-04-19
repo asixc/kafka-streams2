@@ -1,14 +1,26 @@
 # Ejercicio 1 - 23/03/2022
 
-Crear un proyecto java maven con Kafka clients y Kafka streams.
+# Ejercicio 1
 
-Crear datos demo en un topic con una clase Producer.
+Siguiendo el siguiendo esquema:
 
-En otra clase separada utilizar Kafka Streams para aplicar transformaciones sobre los datos del topic original enviarlos a otro topic, por ejemplo leer las longitudes de cadenas de texto, filtrar datos, aplicar una operación map, etc.
+1. Borrar topics (si es ya existen)
+2. Generar datos demo (Producer)
+3. Kafka Stream (con cualquiera de las siguientes opciones)
+4. Comprobar datos (Consumer)
 
-El alumno elegirá los datos para el topic de entrada y de salida.
+Crear un proyecto java maven (sin spring) donde se puedan probar los 4 pasos mencionados desde un main. Para simplificar el proceso nos podemos apoyar en clases de utilidad como hemos hecho en clase.
 
-Utilizar tipos básicos como por ejemplo String Double Long.
+Ejemplo clases
+
+* utils
+    * Deleter
+    * Producer
+    * Processor
+    * Consumer
+* Main.java: invoca los métodos creados en las otras clases.
+
+El alumno elige los datos y el procesamiento que quiere hacer sobre los mismos, por ejemplo: filter, mapValues, count.
 
 ## Proceso:
 ### Añadir dependencias:
